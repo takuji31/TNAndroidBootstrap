@@ -16,17 +16,10 @@
 
 package in.tkch.androidbootstrap.mortar.util;
 
-import android.content.Context;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
-import in.tkch.androidbootstrap.MyApplication;
-
 public final class Utils {
-    public static void inject(Context context, Object thing) {
-        //TODO fix
-        //((MyApplication) context.getApplicationContext()).getGlobalGraph().inject(thing);
-    }
 
     public interface OnMeasuredCallback {
         void onMeasured(View view, int width, int height);
