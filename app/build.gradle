@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "in.tkch.androidbootstrap"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21.0.3'
+    compile 'com.android.support:cardview-v7:21.0.3'
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'com.squareup.mortar:mortar:0.17-SNAPSHOT'
+    compile 'com.squareup.mortar:dagger2support:0.17-SNAPSHOT'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.google.dagger:dagger:2.0-SNAPSHOT'
+    compile 'com.squareup.flow:flow:0.9-SNAPSHOT'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+    provided "org.projectlombok:lombok:1.14.8"
+    apt "org.projectlombok:lombok:1.14.8"
+    apt 'com.google.dagger:dagger-compiler:2.0-SNAPSHOT'
+    compile 'com.google.code.findbugs:jsr305:3.0.0'
+}
